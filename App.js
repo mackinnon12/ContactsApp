@@ -70,7 +70,20 @@ const NewContact = ({ navigation, route }) => {
           <Text style={styles.doneButText}>Done</Text>
         </Pressable>
       </View>
-      <Image source={require("./images/1.png")} style={styles.contactImage} />
+      {/* Contact Photo */}
+      {/* This view is causing the issue with the cancel button */}
+      <View style={styles.addPhotoContainer}>
+        <Image source={require("./images/1.png")} style={styles.contactImage} />
+        <View style={styles.newDoneBut}>
+          {/* Add Photo Button */}
+          <Pressable
+            style={styles.addPhotoButton}
+            onPress={() => navigation.navigate("Contacts")}
+          >
+            <Text style={styles.addPhotoButtonText}>Add Photo</Text>
+          </Pressable>
+        </View>
+      </View>
     </View>
   );
 };
@@ -126,7 +139,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   plusButton: {
-    left: 350,
+    left: 320,
     bottom: 45,
     width: 50,
     height: 50,
@@ -183,6 +196,21 @@ const styles = StyleSheet.create({
     marginTop: 38,
     width: 158,
     height: 158,
+  },
+  addPhotoContainer: {
+    top: 30,
+    height: 150,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  addPhotoButton: {
+    width: 100,
+    top: 12,
+  },
+  addPhotoButtonText: {
+    textAlign: "center",
+    fontSize: 18,
+    color: "#0066FF",
   },
 });
 export default App;
