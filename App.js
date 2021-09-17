@@ -36,9 +36,9 @@ const MainScreen = ({ navigation }) => {
       </View>
 
       <View style={styles.contactsContainer}>
-        <Contacts text={"Jacob MacKinnon"} />
-        <Contacts text={"Jacob MacKinnon"} />
-        <Contacts text={"Jacob MacKinnon"} />
+        <Contacts text={"Jacob"} />
+        <Contacts text={"Jacob"} />
+        <Contacts text={"Jacob"} />
       </View>
     </View>
   );
