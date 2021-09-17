@@ -78,7 +78,7 @@ const NewContact = ({ navigation, route }) => {
           {/* Add Photo Button */}
           <Pressable
             style={styles.addPhotoButton}
-            onPress={() => navigation.navigate("Contacts")}
+            onPress={() => choosePhoto()}
           >
             <Text style={styles.addPhotoButtonText}>Add Photo</Text>
           </Pressable>
@@ -86,6 +86,10 @@ const NewContact = ({ navigation, route }) => {
       </View>
     </View>
   );
+};
+
+const choosePhoto = () => {
+  
 };
 
 // Confirms for the cancellation of adding a contact
